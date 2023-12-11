@@ -1,0 +1,23 @@
+{
+  "name": "Terraform test",
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "features": {
+    "ghcr.io/devcontainers/features/terraform:1": {
+      "terragrunt": "none"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.copilot"
+      ]
+    }
+  },
+  "mounts": [
+    {
+      "source": "${localEnv:HOME}/.kube",
+      "target": "/home/vscode/.kube",
+      "type": "bind"
+    }
+  ]
+}
