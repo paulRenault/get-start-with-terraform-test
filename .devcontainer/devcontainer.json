@@ -4,7 +4,13 @@
   "features": {
     "ghcr.io/devcontainers/features/terraform:1": {
       "terragrunt": "none"
+    },
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+      "minikube": "none"
     }
+  },
+  "containerEnv": {
+    "KUBE_CONFIG_PATH": "/home/vscode/.kube/config"
   },
   "customizations": {
     "vscode": {
